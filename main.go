@@ -3,6 +3,8 @@ package main
 import (
 	"flag"
 	"fmt"
+
+	"github.com/AidanThomas/AOC2024/day1"
 )
 
 var day = flag.Int("day", 0, "Specify which day's solution to run")
@@ -15,6 +17,8 @@ func main() {
 
 	var call func() error
 	switch *day {
+	case 1:
+		call = day1.Solution
 	default:
 		call = func() error {
 			return fmt.Errorf("no day was specified")
