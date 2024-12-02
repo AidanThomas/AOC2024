@@ -5,6 +5,7 @@ import (
 	"fmt"
 
 	"github.com/AidanThomas/AOC2024/day1"
+	"github.com/AidanThomas/AOC2024/day2"
 )
 
 var day = flag.Int("day", 0, "Specify which day's solution to run")
@@ -19,6 +20,8 @@ func main() {
 	switch *day {
 	case 1:
 		call = day1.Solution
+	case 2:
+		call = day2.Solution
 	default:
 		call = func() error {
 			return fmt.Errorf("no day was specified")
