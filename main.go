@@ -6,6 +6,7 @@ import (
 
 	"github.com/AidanThomas/AOC2024/day1"
 	"github.com/AidanThomas/AOC2024/day2"
+	"github.com/AidanThomas/AOC2024/day3"
 )
 
 var day = flag.Int("day", 0, "Specify which day's solution to run")
@@ -22,6 +23,8 @@ func main() {
 		call = day1.Solution
 	case 2:
 		call = day2.Solution
+	case 3:
+		call = day3.Solution
 	default:
 		call = func() error {
 			return fmt.Errorf("no day was specified")
